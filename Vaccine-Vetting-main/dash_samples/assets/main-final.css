@@ -1,0 +1,241 @@
+
+/*.body {
+    background-image: url('capui1.png');
+}*/
+
+/*user info page*/
+
+html, body {
+    margin:0px;
+    height:100%;
+    background-image: url('capui3.png');
+}
+
+
+/*
+#body1{
+    background-image: url('capui1.png');
+    width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:1000;
+}*/
+
+/*---------------------------------------------------*/
+
+.uip {
+    background-image: url('capui1.png');
+    /*background-repeat: no-repeat;*/
+    padding: 10;
+    flex: 1;
+    /*height:100%;*/
+    height:100vh;
+    /*width:100vh;*/
+}
+
+.uip-outer{
+    display: flex;
+    flex-direction: row;
+}
+
+/*---------------------------------------------------*/
+
+.submit{
+    border: 1px solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+
+    border-radius: 50%;
+
+    background-color: #89ade4;
+
+    font-family:'papyrus'; 
+    font-weight: bold;
+}
+
+.submit:hover{
+    background-color: #1cb663;
+    
+}
+
+.submit:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/*---------------------------------------------------*/
+
+/*textboxes*/
+.tb{
+    background-color: #e3ebf9;
+    border: 0.5px solid #b8ceef;
+    border-radius: 4px;
+    height: 25px;
+
+    font-family:'papyrus';
+}
+
+.tb:hover{
+    background-color: #bed2f0;
+    transition-duration: 0.5s;
+}
+
+.tb:hover:after{
+    transition-duration: 0.5s;
+}
+
+.tb:focus{
+    background-color: #bed2f0;
+    border: 1px solid black;
+    border-color: rgb(0, 0, 0),
+}
+
+/*---------------------------------------------------*/
+
+.heading{
+    font-family:'papyrus'; 
+    font-weight: bold;
+    text-decoration: underline overline;
+}
+
+.heading2{
+    font-family:'papyrus'; 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*results*/
+
+/*
+body{
+    background-image: url('capui2.png');
+}*/
+
+/*-------------------------------------------------------*/
+
+/*for vaccine containers*/
+.flex-container {
+    display: flex;
+    
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid #8fb1e6;
+    background-image: url('capui2.png');
+    
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+.r-outer {
+        display: flex;
+        flex-direction: row;
+}
+
+.r {
+    background-image: url('capui2.png');
+    padding: 10;
+    flex: 1;
+    /*height:100%;*/
+    height:100vh;
+}    
+
+/*-------------------------------------------------------*/
+
+
+.label{
+    font-family:'papyrus'; 
+    font-weight: bold;
+}
+
+.label2{
+    font-family:'papyrus'; 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.label3{
+    font-family:'papyrus';
+}
+
+/*
+.heading{
+    text-decoration: underline overline;
+    font-family:'papyrus'; 
+    font-weight: bold;
+}*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*landing page*/
+
+/*
+body{
+    background-image: url('capui3.png');
+}*/
+
+/*
+.heading{
+    text-decoration: underline overline;
+    font-family:'papyrus'; 
+    font-weight: bold;
+}*/
+
+/*
+.heading2{
+    font-family:'papyrus'; 
+    font-weight: bold;
+    text-decoration: underline;
+}*/
+
+
+.submit2{
+    border: 1px solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+
+    border-radius: 50%;
+
+    background-color: #89ade4;
+
+    font-family:'papyrus'; 
+    font-weight: bold;
+
+    /*margin-left: auto;*/
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit2:hover{
+    background-color: #1cb663;
+    
+}
+
+.submit2:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

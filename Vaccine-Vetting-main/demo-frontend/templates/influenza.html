@@ -1,0 +1,130 @@
+{% extends 'bootstrap/base.html' %} {% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %} Influenza - Vaccines {% endblock %} 
+
+{% block styles%} {{ super() }}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+{% endblock styles%}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+      <h1 class="pt-5 pb-2">Influenza Vaccines</h1>
+      <p class="lead">
+        The Following Vaccines are available for the region selected:
+      </p>
+      <br />
+      <div class="dropdown">
+        <button onclick="myFunction1()" class="dropbtn">
+          FLUZONE QUADRIVALENT<i class="arrow down"></i>
+        </button>
+        <div id="myDropdown1" class="dropdown-content">
+          <a href="">Pain</a>
+          <a href="">Pain in extremity</a>
+          <a href="">Injection site pain</a>
+          <a href="">Arthralgia</a>
+          <a href="">Mobility decreased</a>
+          <a href="">Pyrexia</a>
+          <a href="">Rash</a>
+          <a href="">Headache</a>
+          <a href="">Asthenia </a>
+          <a href="">Seizure </a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button onclick="myFunction2()" class="dropbtn">
+          FLUCELVAX QUADRIVALENT<i class="arrow down"></i>
+        </button>
+        <div id="myDropdown2" class="dropdown-content">
+          <a href="">Injection site swelling</a>
+          <a href="">Injection site pain</a>
+          <a href="">Pain in extremity</a>
+          <a href="">Injection site erythema</a>
+          <a href="">Vaccination site mass</a>
+          <a href="">Injection site warmth</a>
+          <a href="">Vaccination site rash</a>
+          <a href="">Vaccination site warmth</a>
+          <a href="">Pain</a>
+          <a href="">Vaccination site erythema</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button onclick="myFunction3()" class="dropbtn">
+          FLUZONE HIGH-DOSE QUADRIVALENT<i class="arrow down"></i>
+        </button>
+        <div id="myDropdown3" class="dropdown-content">
+          <a href="">Pain</a>
+          <a href="">Pain in extremity</a>
+          <a href="">Injection site pain</a>
+          <a href="">Fatigue</a>
+          <a href="">Anthralgia</a>
+          <a href="">Pyrexia</a>
+          <a href="">Mobility Decreased</a>
+          <a href="">Chills</a>
+          <a href="">Guillain-Barre syndrome</a>
+          <a href="">Vaccination site erythema</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button onclick="myFunction4()" class="dropbtn">
+          AFLURIA QUADRIVALENT<i class="arrow down"></i>
+        </button>
+        <div id="myDropdown4" class="dropdown-content">
+          <a href="">Pain</a>
+          <a href="">Anthralgia</a>
+          <a href="">Mobility Decreased</a>
+          <a href="">Headache</a>
+          <a href="">Pain in extremity</a>
+          <a href="">Injection site pain</a>
+          <a href="">Hypoaesthesia </a>
+          <a href="">Myalgia </a>
+          <a href="">Unevaluable event</a>
+          <a href="">Paraesthesia </a>
+        </div>
+      </div>
+
+      <p class="pt-5"><strong>{{ message }}</strong></p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+  /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+  function myFunction1() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+  }
+  function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+  }
+  function myFunction3() {
+    document.getElementById("myDropdown3").classList.toggle("show");
+  }
+  function myFunction4() {
+    document.getElementById("myDropdown4").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches(".dropbtn")) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    }
+  };
+</script>
+{% endblock scripts %}

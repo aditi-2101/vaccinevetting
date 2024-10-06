@@ -1,0 +1,109 @@
+{% extends 'bootstrap/base.html' %} {% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles%} {{ super() }}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+{% endblock styles%}
+
+ {% block title %} COVID - Vaccines {% endblock %} {% block
+content %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+      <h1 class="pt-5 pb-2">Covid Vaccines</h1>
+      <p class="lead">
+        The Following Vaccines are available for the region selected:
+      </p>
+      <br />
+
+      <div class="vax-box">
+      <h2>MODERNA</h2>
+      <h4>Risk Percentage: 9%</h4>
+      <div class="dropdown">
+        <button onclick="myFunction1()" class="dropbtn">Symptoms<i class="arrow down"></i></button>
+        <div id="myDropdown1" class="dropdown-content">
+          <a href="">Headache</a>
+          <a href="">Fatigue</a>
+          <a href="">Pyrexia</a>
+          <a href="">Pain</a>
+          <a href="">Chills</a>
+          <a href="">Nausea</a>
+          <a href="">Pain in extremity</a>
+          <a href="">Injection site erythema</a>
+          <a href="">Dizziness</a>
+          <a href="">Injection site pain</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="vax-box">
+        <h2>PFIZER-BIOTECH</h2>
+        <h4>Risk Percentage: 3%</h4>
+      <div class="dropdown">
+        <button onclick="myFunction2()" class="dropbtn">Symptoms<i class="arrow down"></i></button>
+        <div id="myDropdown2" class="dropdown-content">
+          <a href="">Headache</a>
+          <a href="">Fatigue</a>
+          <a href="">Pyrexia</a>
+          <a href="">Pain</a>
+          <a href="">Chills</a>
+          <a href="">Nausea</a>
+          <a href="">Pain in extremity</a>
+          <a href="">Arthralgia</a>
+          <a href="">Dyspnoea</a>
+          <a href="">Myalgia</a>
+        </div>
+      </div>
+    </div>
+<!-- 
+      <div class="dropdown">
+        <button onclick="myFunction3()" class="dropbtn">JANSSEN <i class="arrow down"></i></button>
+        <div id="myDropdown3" class="dropdown-content">
+          <a href="">Headache</a>
+          <a href="">Pyrexia</a>
+          <a href="">Chills</a>
+          <a href="">Pain</a>
+          <a href="">Fatigue</a>
+          <a href="">Dizziness</a>
+          <a href="">Nausea</a>
+          <a href="">Myalgia</a>
+          <a href="">Injection site pain</a>
+          <a href="">Dyspnoea</a>
+        </div>
+      </div> -->
+
+      <p class="pt-5"><strong>{{ message }}</strong></p>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block scripts %}
+<script>
+  /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+  function myFunction1() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+  }
+  function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+  }
+  function myFunction3() {
+    document.getElementById("myDropdown3").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches(".dropbtn")) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    }
+  };
+</script>
+{% endblock scripts %}

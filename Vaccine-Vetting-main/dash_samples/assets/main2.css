@@ -1,0 +1,58 @@
+body{
+    background-image: url('capui2.png');
+}
+
+/*-------------------------------------------------------*/
+
+/*for vaccine containers*/
+.flex-container {
+    display: flex;
+    
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid #8fb1e6;
+    background-image: url('capui2.png');
+    
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+.r-outer {
+        display: flex;
+        flex-direction: row;
+}
+
+.r {
+    background-image: url('capui2.png');
+    padding: 10;
+    flex: 1;
+    /*height:100%;*/
+    height:100vh;
+}    
+
+/*-------------------------------------------------------*/
+
+.label{
+    font-family:'papyrus'; 
+    font-weight: bold;
+}
+
+.label2{
+    font-family:'papyrus'; 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.label3{
+    font-family:'papyrus';
+}
+
+.heading{
+    text-decoration: underline overline;
+    font-family:'papyrus'; 
+    font-weight: bold;
+}
